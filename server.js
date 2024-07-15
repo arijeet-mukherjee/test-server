@@ -11,6 +11,7 @@ app.use(cors({origin : "*"}));
 
 app.post('/api', (req, res) => {
     res.send('Hello World ${req.body}' + req.body);
+    console.log('Hello World ${req.body}' + req.body);
     return;
 });
 app.get('/api', (req, res) => {
