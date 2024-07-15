@@ -10,11 +10,11 @@ app.use(cors({origin : "*"}));
 
 
 app.post('/api', (req, res) => {
-    res.send('Hello World ${req.body}');
+    res.send('Hello World ${req.body}' + req.body);
     return;
 });
 app.get('/api', (req, res) => {
-    res.send('Hello World');
+    res.send('Hello World ${req.body}' + req.body);
     return;
 });
 
