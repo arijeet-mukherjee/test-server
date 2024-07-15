@@ -13,8 +13,9 @@ app.post('/api', (req, res) => {
     const githubEvent = req.headers['x-github-event'];
     
       if (githubEvent === 'issues') {
-        const data = request.body;
+        const data = req.body;
         const action = data.action;
+          console.log(data , action);
         if (action === 'opened') {
           console.log(`An issue was opened with this title: ${data.issue.title}`);
         } else if (action === 'closed') {
