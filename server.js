@@ -28,6 +28,7 @@ app.post('/api', (req, res) => {
       } else {
         console.log(`Unhandled event: ${githubEvent}`);
       }
+    console.log(">>>>>>>>>>>>>")
     return;
 });
 
