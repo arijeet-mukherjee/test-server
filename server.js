@@ -9,6 +9,7 @@ const cors = require('cors');
 app.use(cors({origin : "*"}));
 
 app.post('/api', (req, res) => {
+    console.log(">>>>>>>>>>>>>")
     res.send('Hello World.. Got event' + req.body);
     const githubEvent = req.headers['x-github-event'];
     
